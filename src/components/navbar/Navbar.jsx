@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar__container" >
         <div className="navbar__wrapper">
            <div className="navbar__left">
-                <span>logo</span>
+           <img src="/images/png/logo.png" alt="logo" />
            </div>
            <div className="navbar__center">
                <div className="navbar__center_wrapper">

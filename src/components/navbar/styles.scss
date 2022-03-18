@@ -30,7 +30,10 @@
       flex: 1;
       display: flex;
       align-items: center;
-      //   background-color: beige;
+      // background-color: beige;
+      img {
+        width: 50%;
+      }
       span {
         cursor: pointer;
         // color: $alternative-color;
