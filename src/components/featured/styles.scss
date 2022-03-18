@@ -1,0 +1,46 @@
+@import "../../global.scss";
+.featured__container {
+  width: 100vw;
+  height: calc(80vh - 70px);
+  // background-color: $main-color;
+  overflow-x: hidden;
+  background: $main-color;
+  background: linear-gradient(110deg, $main-color 50%, $second-color 100%);
+
+  .featured__wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    .slider {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background-color: aqua;
+
+      .slick-dots {
+        li button::before {
+          color: white;
+          opacity: 0.1;
+        }
+        // z-index: ;
+        // display:  !important;
+        width: max-content;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: absolute;
+        bottom: 3px;
+        font-size: 30px !important;
+        // background-color: white;
+        & li.slick-active button::before {
+          color: $second-color !important;
+          opacity: 1;
+        }
+
+        // background-color: aqua !important;
+      }
+    }
+  }
+}

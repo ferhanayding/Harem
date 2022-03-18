@@ -1,0 +1,27 @@
+.deneme__container {
+  height: auto;
+  width: 100vw;
+  background-color: aqua;
+  padding: 10%;
+  .deneme__wrapper {
+    .deneme__items_container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      .deneme_item {
+        background-color: aquamarine;
+        width: 49.9%;
+
+        .deneme__item_wrapper {
+          width: 100%;
+          background-color: black;
+          img {
+            width: 100%;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

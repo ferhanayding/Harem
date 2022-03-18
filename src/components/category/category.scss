@@ -1,0 +1,164 @@
+@import "../../global.scss";
+.categoryItems_container {
+  height: auto;
+  width: 100vw;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $sumac-color;
+  img {
+    color: white;
+    // background-color: white;
+    height: 30px;
+    width: 150px;
+  }
+  //   justify-content: center;
+  //   background-color: rgb(6, 95, 95);
+  .category__title {
+    margin-bottom: 20px;
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      color: $primary-color;
+      letter-spacing: 5px;
+    }
+  }
+  .category__items_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // margin: auto;
+    .categoryItems__wrapper {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // flex-direction: column;
+      // background-color: black;
+      width: 49%;
+      min-width: 380px;
+      height: 300px;
+      // padding: 10px;
+      .flip-box {
+        display: flex;
+        // align-content: stretch;
+        min-height: 290px;
+        flex-wrap: wrap;
+        position: relative;
+        // border: 10px solid transparent;
+        padding: 0;
+        // border-top: 0;
+        -webkit-perspective: 1000;
+        perspective: 1000;
+        width: 100%;
+
+        &:hover {
+          .back {
+            transform: rotateY(0deg);
+            z-index: 10;
+          }
+
+          .front {
+            transform: rotateY(180deg);
+            z-index: -1;
+          }
+        }
+
+        .back,
+        .front {
+          // position: relative;
+          border: 5px ridge $second-color;
+          border-radius: 4px;
+          // box-shadow: rgba(219, 213, 213, 0.35) 0px 5px 15px;
+
+          background-color: #1b2d61;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-content: center;
+
+          width: 100%;
+          -webkit-transition: all 1s cubic-bezier(0.5, 1, 0.5, 1);
+          transition: all 2s cubic-bezier(1, 1.3, 0.5, 1.3);
+          transform-style: preserve-3d;
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          align-items: center;
+        }
+
+        .back {
+          background-color: teal;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          z-index: -1;
+          transform: rotateY(-180deg);
+        }
+
+        .front {
+          z-index: 10;
+        }
+
+        .content {
+          display: flex;
+          width: 95%;
+          height: 90%;
+          // transition: all 5s cubic-bezier(1, 1.3, 0.5, 1.3);
+          border: 3px solid $second-color;
+          border-radius: 4px;
+          // background-color: #1b2d61;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          -webkit-transform: translateZ(50px);
+          transform: translateZ(100px);
+          .category__title_container {
+            background-color: rgba(36, 11, 11, 0.692);
+            width: 30%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+
+            h4 {
+              text-shadow: 0px 0px 2px rgb(8, 2, 2);
+              color: #f9f9f9;
+              // font-weight: ;
+              letter-spacing: 5px;
+              // text-transform: uppercase;
+              // padding: 3px 5px;
+            }
+          }
+          a {
+            // background-color: #1b2d61;
+            width: 20%;
+            min-width: 20%;
+            height: 30%;
+            button {
+              border: none;
+              background-color: $primary-color;
+              color: $sumac-color;
+              width: 100%;
+              height: 100%;
+              border: 1px solid $sumac-color;
+              font-size: 1.5rem;
+              text-transform: uppercase;
+              cursor: pointer;
+              transition: all 1s ease-in-out;
+              &:hover {
+                background-color: $sumac-color;
+                color: $primary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
